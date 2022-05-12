@@ -1,0 +1,239 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Life Surety</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="{% static 'admin/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'admin/css/style2.css' %}" />
+    <link rel="stylesheet" href="https://assets.calendly.com/assets/external/widget.css"/>
+  </head>
+
+  <body>
+    <div class="nav">
+      <div class="container-sm">
+        <div class="navbar">
+          <div class="nav-btn">
+            <a class="btn black-btn" aria-current="page" href="#">Contact Us</a>
+            <a class="btn" href="#">About Us</a>
+          </div>
+          <div class="logo">
+            <a href="{% url 'index' %}">
+              <img src="{% static 'admin/img/Logo.svg' %}" alt="Logo" />
+            </a>
+          </div>
+          <div class="d-flex">
+            <div class="d-flex nav-btn" style="position: relative">
+              <div class="me-3 d-flex" id="drop">
+                 
+               <!-- <div class="language-picker js-language-picker" data-trigger-class="btn btn--subtle js-tab-focus">-->
+                <form action="" class="language-picker__form">
+                  <label for="language-picker-select">Select language</label>                 
+                                  
+                  <select name="language-picker-select" id="language-picker-select">                    
+                    <option lang="de" value="deutsch">Deutsch</option>
+                    <option lang="en" value="english" selected>English</option>
+                    <option lang="fr" value="francais">Français</option>
+                    <option lang="it" value="italiano">Italiano</option>
+                  </select>
+                 
+                </form>
+              </div>
+
+              <a class="btn yellow-btn d-flex" aria-current="page" href=""onclick="Calendly.initPopupWidget
+              ({url: 'https://calendly.com/lifesurety'});return false;"><span class="d-flex">
+                <span class="d-flex">
+                  <img src="{% static 'admin/img/calender.svg' %}" alt="" />
+                </span>Schedule consultation</a>
+            </div>
+            <a href="#">
+              <img src="{% static 'admin/img/ButtonMenu.svg' %}" class="mx-3 bars" alt="" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="border: 0.2px solid rgb(229, 229, 229)"></div>
+    <div class="container-sm">
+      <ul class="sub-nav" style="justify-content: space-between">
+        <a href="{% static 'lifeInsurance.html' %}" class="d-flex">
+          <img src="{% static 'admin/img/Art-Life Insurance.svg' %}" alt="Life" />
+          <p>Life Insurance</p>
+        </a>
+        <a href="{% static 'healthInsurance.html' %}" class="d-flex">
+          <img src="{% static 'admin/img/Art-Health Insurance.svg' %}" alt="Life" />
+          <p>Health Insurance</p>
+        </a>
+        <a href="{% static 'healthInsurance.html' %}" class="d-flex">
+          <img src="{% static 'admin/img/svgrepo.svg' %}" alt="Life" />
+          <p>Group benefits</p>
+        </a>
+        <a href="{% static 'analyst.html' %}" class="d-flex">
+          <img src="{% static 'admin/img/Art-Analyst Services.svg' %}" alt="Life" />
+          <p>Social Security benefits analysis</p>
+        </a>
+        <a href="{% static 'notary.html' %}" class="d-flex">
+          <img src="{% static 'admin/img/Art-Notorious.svg' %}" alt="Life" />
+          <p>Notary Services</p>
+        </a>
+      </ul>
+    </div>    
+    
+          {% block content %}
+
+
+          {% endblock %}
+
+    <!--Menu-->
+    <div class="navbar-2 px-2">
+      <div class="d-flex">
+        <div class="nav-btn">
+          <a class="btn black-btn" aria-current="page" href="#">Contact Us</a>
+          <a class="btn" href="#">About Us</a>
+        </div>
+        <div class="logo">
+          <img src="{% static 'admin/img/Logo.svg' %}" alt="Logo" />
+        </div>
+        <div class="d-flex">
+          <div class="d-flex nav-btn">
+            <p class="mx-3 d-flex">
+              <img src="./images/Union.svg" alt="" /><span>En</span>
+              <img src="./images/downarrow.svg" alt="" />
+            </p>
+
+            <a class="btn yellow-btn d-flex" aria-current="page" href=""
+            onclick="Calendly.initPopupWidget({url: 'https://calendly.com/lifesurety'});return false;">
+            <span class="d-flex">
+                <img src="./images/calender.svg" alt="" /></span>Schedule consultation</a>
+          </div>
+          <a href="#">
+            <img src="{% static 'admin/img/close-menu.svg' %}" class="mx-3 bars" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-md-4 foot-text mb-1" style="border-right: 1px solid #999">
+          <h4>Contacts</h4>
+          <div class="d-flex">
+            <img src="{% static 'admin/img/Frame.svg' %}" alt="" />
+            <p>
+              Working hours <br />
+              Monday - Friday: 9am - 4pm
+            </p>
+          </div>
+          <p class="d-flex">
+            <img
+              src="{% static 'admin/img/Frame-1.svg' %}"
+              class="me-2" alt=""/>1-202-446-6861
+          </p>
+          <p class="d-flex">
+            <img
+              src="{% static 'admin/img/Frame-2.svg' %}"
+              class="me-2"
+              alt=""
+            />help@lifesurety.com
+          </p>
+          <p class="d-flex">
+            <img src="{% static 'admin/img/Frame-3.svg' %}" class="me-2" alt="" />Privacy
+            policy
+          </p>
+        </div>
+        <div class="col-md-8 foot-link mb-1">
+          <p class="text-muted d-flex">
+            <img
+              src="{% static 'admin/img/grid.svg' %}"
+              class="me-2"
+              width="20rem"
+              alt=""/>Catalogue of services <img src="{% static 'admin/img/arrow-right.svg' %}" alt="" />
+          </p>
+          <a href="./lifeInsuarance.html">Life Insurance</a><br />
+          <div class="main" style="position: relative">
+            <a href="./healthInsurance.html" id="title">
+              <span class="d-flex m-0">
+                Health Insurance
+                <img src="./images/arrow-right-yellow.svg" alt="" /></span></a>
+            <ul class="dropdown">
+              <li class="icon"><a href="#">Individual Plans</a></li>
+              <li class="icon">Family Plans</li>
+              <li class="icon">Ancillary plans</li>
+              <li class="icon">Medicare Advantage plans</li>
+              <li class="icon">Medigap (Medicare supplement)</li>
+              <li class="icon">Prescription Drug plans</li>
+              <li class="icon">Dental Plans</li>
+              <li class="icon">Vision plans</li>
+            </ul>
+          </div>
+          <a href="{% static 'notary.html' %}">Group benefit</a>
+          <a href="./analyst.html">Registered Social Security Analyst</a><br />
+          <a href="./notary.html">Notary Services</a>
+        </div>
+      </div>
+    </div>
+    <!--end of Menu-->
+
+    <footer class="container-sm my-5">
+      <div class="row footer">
+        <div class="col-md-2 mb-1 text-center">
+          <a href="./index.html">
+            <img src="{% static 'admin/img/Logo.svg' %}" alt=""
+          /></a>
+          <p class="text-muted">© 2022 Life Surety</p>
+        </div>
+        <div class="col-md-4 foot-link mb-1">
+          <p class="text-muted">Catalogue of services</p>
+          <a href="{% static 'lifeInsuarance.html' %}">Life Insurance</a><br />
+          <a href="{% static 'healthInsurance.html' %}">Health Insurance</a><br />
+          <a href="{% static '' %}">Group benefit</a><br />
+          <a href="{% static 'analyst.html' %}">Social Security benefit analysis</a><br />
+          <a href="{% static 'notary.html' %}">Notary Services</a>
+        </div>
+        <div class="col-md-3 foot-text mb-1">
+          <div class="d-flex">
+            <img src="{% static 'admin/img/Frame.svg' %}" alt="" />
+            <p>
+              Working hours <br />
+              Monday - Friday: 9am - 4pm
+            </p>
+          </div>
+          <p class="d-flex">
+            <img
+              src="{% static 'admin/img/Frame-1.svg' %}"
+              class="me-2"
+              alt=""
+            />1-202-446-6861
+          </p>
+          <p class="d-flex">
+            <img
+              src="{% static 'admin/img/Frame-2.svg' %}"
+              class="me-2"
+              alt=""
+            />help@lifesurety.com
+          </p>
+          <a href="{% static 'privacy.html' %}">
+          <p class="d-flex">
+            <img src="{% static 'admin/img/Frame-3.svg' %}" class="me-2" alt="" />Privacy
+            policy
+          </p></a>
+        </div>
+        <div class="col-md-3 text-center">
+          <h5 style="font-weight: normal">Get in touch</h5>
+          <div style="line-height: 1">
+            <a style="display: block" class="btn yellow-btn" href=""onclick="Calendly.initPopupWidget
+            ({url: 'https://calendly.com/lifesurety'});return false;"><span class="d-flex">
+              <span class="d-flex">
+                <img src="{% static 'admin/img/calender.svg' %}" alt="" />Schedule
+                consultation</span
+              ></a><br />
+            <a href="#" class="btn btn-2" style="display: block">Contat us</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="{% static 'admin/js/main.js' %}"></script>
+    <script src="{% static 'admin/js/header.js' %}"></script>
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+  </body>
+</html>
